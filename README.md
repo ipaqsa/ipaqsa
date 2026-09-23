@@ -2,7 +2,7 @@
 
 **Tech Lead and Go engineer focused on Kubernetes platform engineering.**
 
-I build controllers, operators, and runtime systems at the intersection of Kubernetes, Linux, cloud infrastructure, networking, and security. I enjoy turning complex lifecycle and reconciliation problems into predictable, observable systems.
+I develop Kubernetes platform software in Go. My work includes controllers and operators, package management, dependency scheduling, and cloud integration, with a focus on keeping production systems reliable during upgrades, failures, and configuration changes.
 
 <p>
   <img src="https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white" alt="Go">
@@ -23,16 +23,22 @@ I build controllers, operators, and runtime systems at the intersection of Kuber
 
 I currently work as a Tech Lead at [Flant](https://flant.com/) on [Deckhouse Kubernetes Platform](https://github.com/deckhouse/deckhouse).
 
-My recent work includes:
+Selected work:
 
-- Leading the architecture of a unified package runtime for applications and modules
-- Designing dependency-aware DAG schedulers with parallel execution and explicit lifecycle states
-- Building reliable controller bootstrap, recovery, health monitoring, and finalizer-driven teardown
-- Implementing integrity-protected OCI module delivery with EROFS and dm-verity
-- Contributing to RBAC, multitenancy, ingress, CRD lifecycle, and platform observability
+- **Unified package runtime:** led the architecture and implementation of a shared runtime for applications and modules, based on declarative Kubernetes controllers. [#21857](https://github.com/deckhouse/deckhouse/pull/21857) [#21997](https://github.com/deckhouse/deckhouse/pull/21997)
+- **Dependency-aware scheduling:** designed schedulers with critical/functional isolation, parallel execution, topological ordering, and explicit lifecycle states. [#13906](https://github.com/deckhouse/deckhouse/pull/13906) [#18121](https://github.com/deckhouse/deckhouse/pull/18121)
+- **Secure module delivery:** implemented read-only OCI module delivery using EROFS and dm-verity, with integrity and signature verification. [#15019](https://github.com/deckhouse/deckhouse/pull/15019) [#15450](https://github.com/deckhouse/deckhouse/pull/15450)
+- **RBAC and multitenancy:** developed core parts of RBAC v2 and project reconciliation for namespace- and cluster-scoped administration. [#8538](https://github.com/deckhouse/deckhouse/pull/8538) [#9291](https://github.com/deckhouse/deckhouse/pull/9291)
+- **Platform reliability:** built package health monitoring and safe finalizer-driven resource teardown. [#19711](https://github.com/deckhouse/deckhouse/pull/19711) [#22372](https://github.com/deckhouse/deckhouse/pull/22372)
 
 [Explore my Deckhouse contributions →](https://github.com/deckhouse/deckhouse/pulls?q=is%3Apr+author%3Aipaqsa)
 
+## Upstream open-source contributions
+
+I also contribute fixes and features upstream to projects used by the Kubernetes ecosystem:
+
+- **Helm:** added support for custom Go template functions when Helm is embedded as a library. [helm/helm#30734](https://github.com/helm/helm/pull/30734)
+- **ingress-nginx:** added HTTP/3 support with NGINX 1.25.5, documented its configuration, and fixed temporary NGINX configuration cleanup. [#11470](https://github.com/kubernetes/ingress-nginx/pull/11470) [#11513](https://github.com/kubernetes/ingress-nginx/pull/11513) [#11569](https://github.com/kubernetes/ingress-nginx/pull/11569)
 ## Managed Kubernetes on OpenStack
 
 Previously, I worked on cloud's Managed Kubernetes service.
